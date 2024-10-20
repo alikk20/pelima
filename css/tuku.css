@@ -1,0 +1,434 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+.container {
+    width: 97%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+}
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    max-width: 97%;
+
+}
+.header img {
+    height:68px;
+    width: 68px;
+    object-fit: cover;
+    max-width: 97%;
+
+}
+.header .breadcrumb-container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+.header .breadcrumb-container .title {
+    font-weight: bold;
+    font-size: 18px;
+}
+.header .breadcrumb-container .breadcrumb {
+    font-size: 14px;
+    color: #888;
+}
+.header .icons {
+    display: flex;
+    align-items: center;
+}
+.header .icons a {
+    font-size: 24px;
+    margin-left: 20px;
+    color: #000;
+    text-decoration: none;
+}
+.header .icons .profile {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.header .icons .profile img {
+    width: 97%;
+    height: 100%;
+    object-fit: cover;
+}
+.product-detail {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+.product-detail .image-gallery {
+    margin-bottom: 20px;
+}
+.product-detail .image-gallery img {
+    width: 100%;
+    border-radius: 10px;
+}
+.product-detail .image-gallery .thumbnails {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+.product-detail .image-gallery .thumbnails img {
+    width: 60px;
+    height: 60px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.product-detail .image-gallery .thumbnails .more {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background-color: #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #555;
+    cursor: pointer;
+}
+.product-detail .product-info {
+    flex: 1;
+}
+.product-detail .product-info h2 {
+    font-size: 28px;
+    margin: 0;
+}
+.product-detail .product-info .rating {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+.product-detail .product-info .rating i {
+    color: #f5c518;
+    margin-right: 5px;
+}
+.product-detail .product-info .price {
+    font-size: 24px;
+    color: #333;
+    margin: 10px 0;
+}
+.product-detail .product-info .tags {
+    display: flex;
+    margin: 10px 0;
+}
+.product-detail .product-info .tags span {
+    background-color: #ddd;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-right: 10px;
+    font-size: 14px;
+}
+.product-detail .product-info .tabs {
+    display: flex;
+    margin: 20px 0;
+}
+.product-detail .product-info .tabs span {
+    margin-right: 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.product-detail .product-info .tabs .active {
+    font-weight: bold;
+    border-bottom: 2px solid #333;
+}
+.product-detail .product-info .description,
+.product-detail .product-info .specification {
+    font-size: 14px;
+    color: #555;
+    display: none;
+}
+.product-detail .product-info .description.active,
+.product-detail .product-info .specification.active {
+    display: block;
+}
+.product-detail .product-info .buy-now {
+    display: block;
+    width: 200px;
+    padding: 10px;
+    background-color: #ff9900;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 18px;
+    margin: 40px auto 20px;
+    text-decoration: none;
+}
+
+.product-detail .product-info .rating-summary {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+.product-detail .product-info .rating-summary .rating-value {
+    font-size: 24px;
+    margin-left: 10px;
+}
+.product-detail .product-info .rating-summary .rating-bars {
+    flex: 1;
+    margin-left: 20px;
+}
+.product-detail .product-info .rating-summary .rating-bars .bar {
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+}
+.product-detail .product-info .rating-summary .rating-bars .bar span {
+    width: 20px;
+    text-align: right;
+    margin-right: 10px;
+}
+.product-detail .product-info .rating-summary .rating-bars .bar .progress {
+    flex: 1;
+    height: 10px;
+    background-color: #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.product-detail .product-info .rating-summary .rating-bars .bar .progress .progress-bar {
+    height: 100%;
+    background-color: #ff9900;
+}
+.reviews {
+    margin-top: 20px;
+}
+.reviews h3 {
+    font-size: 18px;
+    margin: 0;
+}
+.reviews .review {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+.reviews .review img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.reviews .review .review-content {
+    flex: 1;
+}
+.reviews .review .review-content .review-header {
+    display: flex;
+    align-items: center;
+}
+.reviews .review .review-content .review-header .name {
+    font-weight: bold;
+    margin-right: 10px;
+}
+.reviews .review .review-content .review-header .date {
+    font-size: 12px;
+    color: #999;
+}
+.reviews .review .review-content .review-text {
+    font-size: 14px;
+    color: #555;
+}
+.reviews .review .review-content .review-actions {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+}
+.reviews .review .review-content .review-actions i {
+    margin-right: 5px;
+}
+.reviews .review .review-content .review-actions .reply {
+    font-size: 12px;
+    color: #999;
+    cursor: pointer;
+}
+.rating {
+    display: flex;
+    align-items: center;
+}
+.rating i {
+    color: #f5c518;
+    margin-right: 5px;
+}
+.rating .score {
+    font-size: 2em;
+    margin-left: 10px;
+}
+.rating-bar {
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+}
+.rating-bar span {
+    width: 20px;
+    text-align: right;
+    margin-right: 10px;
+}
+.rating-bar .bar {
+    width: 100%;
+    height: 10px;
+    background-color: #e0e0e0;
+    position: relative;
+}
+.rating-bar .bar .fill {
+    height: 100%;
+    background-color: #f5c518;
+    position: absolute;
+}
+
+.comment-section {
+    margin-top: 30px;
+    max-width: 97%;
+
+}
+.comment-box {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+}
+.media-man {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+.comment-content {
+    width: 97%;
+}
+.custom-flex {
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-top:   10px; /* Ubah nilai sesuai kebutuhan */
+margin-bottom: 10px; /* Ubah nilai sesuai kebutuhan */
+}
+
+.comment-user {
+    font-weight: bold;
+    font-size: 14px;
+    max-width: 97%;
+}
+.comment-time {
+    font-size: 12px;
+    margin-right: 80px;
+    color: #888;
+}
+.comment-time-reply {
+    font-size: 12px;
+    margin-right: 200px;
+    color: #888;
+}
+.rating i {
+    color: #f5c518;
+}
+.reply-link {
+    color: #007bff;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 14px;
+}
+.reply-link:hover {
+    text-decoration: underline;
+}
+.comment-text {
+    font-size: 14px;
+    margin: 10px 0;
+}
+.reply-box {
+    margin-left: 65px;
+    margin-top: 10px;
+}
+.comment-form {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+}
+.comment-form h2 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+.comment-form textarea {
+    width: 97%;
+    height: 100px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.comment-form .rating {
+    margin-bottom: 10px;
+}
+.comment-form button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.comment-form button:hover {
+    background-color: #0056b3;
+}
+.rating-input {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px; /* Margin lebih kecil untuk mengangkat elemen */
+}
+.rating-input i {
+    font-size: 20px;
+    cursor: pointer;
+    color: #ddd;
+    transition: color 0.3s ease;
+}
+.rating-input i.selected {
+    color: #f5c518;
+}
+/* Reply box styles */
+.reply-box-content {
+    display: flex;
+    margin-top:   20px; /* Ubah nilai sesuai kebutuhan */
+    margin-bottom: 20px; /* Ubah nilai sesuai kebutuhan */
+    padding: 10px;
+    padding-left: 20px; /* Menjorok ke dalam lebih sedikit */
+    
+}
+.custom-flex {
+    display: flex;
+    gap: 20px; /* Sesuaikan jarak antara left-column dan right-column */
+    flex-wrap: wrap;
+}
+
+.left-column {
+    flex: 2;
+    max-width: 70%; /* Sesuaikan ukuran kolom kiri */
+}
+
+.right-column {
+    flex: 1;
+    max-width: 30%; /* Sesuaikan ukuran kolom kanan */
+    margin-top: 20px; /* Jarak dari atas jika diperlukan */
+}
+
+@media (min-width: 700px) {
+    .product-detail {
+        flex-direction: row;
+    }
+    .product-detail .image-gallery {
+        flex: 1;
+        margin-right: 20px;
+    }
+    .product-detail .product-info {
+        flex: 2;
+    }
+    .reviews div {
+        width: 76%;
+    }
+}

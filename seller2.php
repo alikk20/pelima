@@ -38,7 +38,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <input type="hidden" name="school" value="<?php echo htmlspecialchars($sekolah); ?>">
         <input type="hidden" name="nisn" value="<?php echo htmlspecialchars($nisn); ?>">
         <input type="hidden" name="nohp" value="<?php echo htmlspecialchars($no_hp); ?>">
-        <input type="hidden" name="alamat" value="<?php echo htmlspecialchars($nama_lengkap); ?>">
+        <input type="hidden" name="alamat" value="<?php echo htmlspecialchars($alamat); ?>">
         <input type="email" id ="email" placeholder="Email" name="email" required>
     </div>
     <div class="input-group">

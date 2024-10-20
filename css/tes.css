@@ -1,0 +1,33 @@
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+}
+
+.product-detail-rating {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px; /* Space between the detail and info */
+}
+
+.product-detail {
+    flex: 1;
+}
+
+.rating {
+    flex: 1;
+    overflow-y: auto; /* Allows scrolling if content exceeds max height */
+    max-height: 200px; /* Adjust height as needed */
+}
+
+.product-info {
+    width: 300px; /* Fixed width for product info */
+    padding: 10px;
+    border-left: 1px solid #ccc; /* Optional: visual separation */
+}

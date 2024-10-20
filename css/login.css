@@ -1,0 +1,331 @@
+:root {
+    --bg-primary:#e78531;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--bg-primary);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+}
+
+.login-container {
+    background-color: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    margin-right: 50px;
+}
+
+.login-container h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.login-container input[type="text"],
+.login-container input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border: 2px solid var(--bg-primary); /* Tambahkan border */
+    border-radius: 10px;
+    background-color: #e6d9a8;
+    font-size: 16px;
+}
+
+.login-container a:hover {
+    text-decoration: underline;
+}
+
+.login-container .forgot-password {
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+.login-container .login-button {
+    background-color: var(--bg-primary);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: auto; /* Add this line to push button to the right */
+    display: block; /* Ensure button behaves as a block element */
+}
+
+.login-container .login-button:hover {
+    background-color: var(--bg-primary);
+}
+
+.login-container .register {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.container-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    padding-right: 20px;
+}
+
+.container {
+    background-color: white;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    width: 400px;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.role-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.role {
+    width: 150px;
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+}
+
+.role:hover {
+    background-color: #eee8aa;
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    text-align: left;
+}
+
+button {
+    background-color: var(--bg-primary);
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.logo-container {
+    position: absolute;
+    left: 300px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.logo {
+    width: 300px;
+    height: auto;
+}
+
+#buyer {
+    background-color: #e78531;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: white;
+    border-radius: 20px;
+    padding: 40px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-left: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .dots {
+    display: flex;
+    gap: 5px;
+}
+
+.header .dot {
+    width: 10px;
+    height: 10px;
+    background-color: #fbc02d;
+    border-radius: 50%;
+}
+
+.dot.active {
+    background-color: #ff7f00;
+}
+
+h1 {
+    font-size: 26px;
+    margin: 10;
+}
+
+p {
+    font-size: 16px;
+    color: #333;
+    margin: 10px 0 20px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    background-color: #eee8aa;
+    font-size: 16px;
+    color: #333;
+    border: 2px solid #ccc; /* Tambahkan border */
+}
+
+.input-group input::placeholder {
+    color: #333;
+}
+
+.button {
+    display: flex;
+    justify-content: right;
+}
+
+.button button {
+    background-color: #fbc02d;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #333;
+    cursor: pointer;
+}
+
+/* Menambahkan margin-right untuk tombol "Previous" */
+.button button:first-child {
+    margin-right: 10px; /* Geser tombol "Previous" ke kanan */
+}
+
+.logo-containerr {
+    position: absolute;
+    right: 300px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.logo {
+    width: 300px;
+    height: auto;
+}
+
+.button button:hover {
+    background-color: #ff9800; /* Ganti warna saat hover */
+    color: white; /* Ubah warna teks saat hover */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Tambahkan bayangan saat hover */
+    transform: scale(1.05); /* Tambahkan efek pembesaran saat hover */
+}
+
+.form-row {
+    display: flex;
+    gap: 10px;
+}
+
+.form-row select,
+.form-row input {
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: #eee8aa;
+    font-size: 16px;
+    color: #333;
+    width: 100%;
+    border: 2px solid #eee8aa; /* Tambahkan border */
+}
+
+.form-row select {
+    width: 70%; /* Dropdown takes 70% of the width */
+}
+
+.form-row input {
+    width: 30%; /* NIS input takes 30% of the width */
+}
+
+/* Phone Number styling */
+.input-group.phone-number {
+    margin-top: 30px; /* Add space above Phone Number */
+}
+
+.input-group input {
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: #eee8aa;
+    font-size: 16px;
+    width: 100%;
+    border: 2px solid #eee8aa; /* Tambahkan border */
+}
+
+
+@media (max-width: 900px) {
+    .login-container {
+        width: 70%; 
+        margin-right: 30px; 
+        padding: 20px; 
+    }
+    
+    .login-container h1 {
+        font-size: 28px; 
+    }
+    
+    .login-container input[type="text"],
+    .login-container input[type="password"] {
+        font-size: 14px; 
+    }
+
+    
+    .logo-container {
+        display: none; 
+    }
+    .logo-containerr {
+        display: none; 
+    }
+}
+
+
+@media (max-width: 480px) {
+    .login-container {
+        width: 100%; 
+        margin: 0; 
+    }
+
+    .login-container h1 {
+        font-size: 24px; 
+    }
+
+    .logo-container {
+        display: none; 
+    }
+    .logo-containerr {
+        display: none; 
+    }
+}
