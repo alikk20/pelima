@@ -20,7 +20,15 @@ if ($password == $cpassword) {
     $query_check_email = "SELECT * FROM user WHERE email = '$email'";
     $result_check_email = mysqli_query($is_connect, $query_check_email);
 
+    if (mysqli_num_rows($result_check_email) > 0) {
+        echo '<script language="javascript">';
+        echo 'alert("Email sudah terdaftar!");';
+        echo 'window.location = "../buyer2.php";'; // Ganti dengan halaman yang sesuai
+        echo '</script>';
+        exit();
+    }
 
+    
     // if (mysqli_num_rows($result_check_email) > 0) {
 
     //   $quoeq = "UPDATE user SET 
