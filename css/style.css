@@ -9,11 +9,10 @@ body {
     --lightgrey: #F7F7F7;
 }
 
-header{
+header {
     display: block;
     unicode-bidi: isolate;
 }
-
 
 .topnav {
     background-color: #fff;
@@ -22,7 +21,8 @@ header{
     max-width: 100%;
 }
 
-.topnav .usernav .btn, .topnav .pagenav .filsearch .filter .btn{
+.topnav .usernav .btn,
+.topnav .pagenav .filsearch .filter .btn {
     background-color: var(--lightgrey);
     border-radius: 20px;
     height: 40px;
@@ -39,14 +39,14 @@ header{
 }
 
 .search:hover {
-	width: auto;
+    width: auto;
 }
 
 .search:hover .input {
     width: 120px;
     margin-left: 10px
 }
-  
+
 .search .input {
     background: transparent;
     border: none;
@@ -57,8 +57,8 @@ header{
 }
 
 .search a.btn {
-	width: 35px;
-	margin-left: 0px;
+    width: 35px;
+    margin-left: 0px;
 }
 
 .sidebar-wrap {
@@ -121,7 +121,7 @@ header{
     height: 40px;
 }
 
-.sidebar-wrap .logo-wrap span img{
+.sidebar-wrap .logo-wrap span img {
     align-items: center;
     height: 125px;
 }
@@ -212,4 +212,11 @@ header{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.page-content {
+    position: relative;
+    border-color: #000;
+    left: 65px;
+    top: 
 }
