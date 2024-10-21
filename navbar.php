@@ -1,3 +1,15 @@
+<?php
+session_start();
+require_once("config/connect.php");
+
+if(isset($_SESSION['id'])){
+    $iduser = $_SESSION['id'];
+    $query = mysqli_query($is_connect, "SELECT * FROM user WHERE id = $iduser ");
+
+}
+
+?>
+
 <!doctype html>
 <html lang="en">
 

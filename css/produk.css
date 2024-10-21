@@ -1,5 +1,5 @@
 
-   body {
+        body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
@@ -9,9 +9,10 @@
             display: flex;
             margin-right: 80px;
             scroll-margin-top: 50px;
+            margin-top: 50px;
             
         }
-        
+
         .content {
             flex: 1;
             padding: 20px;
@@ -44,7 +45,7 @@
             transform: scale(1.05);
         }
         .products {
-            margin-top: 100px;
+            margin-top: 126px;
             margin-bottom: 100px;
         }
         .products .sort {
@@ -65,6 +66,7 @@
         }
         .product-item {
             width: 200px;
+            height: 400px;
             background-color: #fff;
             border: 1px solid #ddd;
             border-radius: 10px;

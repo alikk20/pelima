@@ -1,6 +1,6 @@
 <?php
 require_once("config/connect.php");
-$query = "SELECT * FROM `review` join user on user.id=review.id_user join service on service.id=id_service where id_service=1;";
+$query = "SELECT * FROM `review` join user on user.id=review.id_user join service on service.id=id_service where id_service=7;";
 $run_sql = mysqli_query($is_connect, $query);
 
 $total_reviews = 0;
@@ -10,7 +10,7 @@ $total_three_star_reviews = 0;
 $total_two_star_reviews = 0;
 $total_one_star_reviews = 0;
 
-$querye = "SELECT rating, COUNT(rating) as count FROM review join service on service.id=review.id_service where id_service = 1 GROUP BY rating;";
+$querye = "SELECT rating, COUNT(rating) as count FROM review join service on service.id=review.id_service where id_service = 7 GROUP BY rating;";
 $result = mysqli_query($is_connect, $querye);
 
 while ($row = mysqli_fetch_assoc($result)) {
@@ -81,7 +81,7 @@ $one_star_percentage = $total_reviews ? ($total_one_star_reviews / $total_review
         <h1 class="mt-5 mb-5">Reviews</h1>
         <div class="card">
             <?php
-            $query1 = "SELECT service.*, user.nama_lengkap as seller from service join user on service.id_seller=user.id where user.id=1;";
+            $query1 = "SELECT service.*, user.nama_lengkap as seller from service join user on service.id_seller=user.id where user.id=7;";
             $runsql = mysqli_query($is_connect, $query1);
             ?>
             <?php 
@@ -94,9 +94,9 @@ $one_star_percentage = $total_reviews ? ($total_one_star_reviews / $total_review
             ?>
                 <div class="row">
                 <?php
-                    $query5 = "SELECT COUNT(review.id) AS jumlah_review FROM review JOIN service on service.id=review.id_service where id_service =1;";
+                    $query5 = "SELECT COUNT(review.id) AS jumlah_review FROM review JOIN service on service.id=review.id_service where id_service =7;";
                     $runql = mysqli_query($is_connect, $query5);
-                    $query6 = "SELECT AVG(rating) as rata_rating FROM review where id_service = 1;";
+                    $query6 = "SELECT AVG(rating) as rata_rating FROM review where id_service = 7;";
                     $runql2 = mysqli_query($is_connect, $query6);
                 ?>
                     <div class="col-sm-4 text-center">

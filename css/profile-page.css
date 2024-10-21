@@ -1,0 +1,304 @@
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .container {
+            display: flex;
+        }
+        .sidebar {
+            width: 200px;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            height: 100vh;
+        }
+        .sidebar img {
+            width: 100px;
+            margin-bottom: 20px;
+        }
+        .sidebar a {
+            display: block;
+            color: #333;
+            text-decoration: none;
+            margin: 10px 0;
+            font-size: 18px;
+        }
+        .sidebar a.active {
+            color: white;
+            background-color: #ff7f00;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .content {
+            flex: 1;
+            padding: 20px;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header h1 {
+            font-size: 24px;
+            margin: 0;
+        }
+        .header .breadcrumb {
+            font-size: 14px;
+            color: #888;
+        }
+        .profile-card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 20px;
+            margin-top: 20px;
+        }
+        .profile-card .tabs {
+            display: flex;
+            border-bottom: 2px solid #ff6600;
+        }
+        .profile-card .tabs div {
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        .profile-card .tabs .active {
+            background-color: #ff6600;
+            color: #fff;
+            border-radius: 10px 10px 0 0;
+        }
+        .profile-card .content {
+            padding: 20px;
+        }
+        .profile-card .content img {
+            width: 150px;
+            height: 150px;
+            border-radius: 10px;
+            margin-right: 20px;
+        }
+        .profile-card .content .info {
+            display: flex;
+            align-items: center;
+        }
+        .profile-card .content .info .details {
+            flex: 1;
+        }
+        .profile-card .content .info .details h2 {
+            margin: 0;
+            font-size: 20px;
+        }
+        .profile-card .content .info .details p {
+            margin: 5px 0;
+            color: #888;
+        }
+        .profile-card .content .info .details .edit {
+            color: #ff6600;
+            cursor: pointer;
+        }
+        .profile-card .content .address {
+            margin-top: 20px;
+        }
+        .profile-card .content .address p {
+            margin: 5px 0;
+        }
+        .profile-card .content .address .edit {
+            color: #ff6600;
+            cursor: pointer;
+        }
+        .profile-card .content .address .bold-text {
+            font-weight: bold;
+        }
+        .ad {
+            background-color: #f5f5f5;
+            padding: 10px;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+        }
+       
+        .ad a {
+            color: #ff7f00;
+            text-decoration: none;
+        }
+        .change-image-btn {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #ff6600;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+        }
+        .change-image-btn:hover {
+            background-color: #e65c00;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        .left button {
+      margin-top: 10px;
+      padding: 5px 10px;
+      cursor: pointer;
+      display: block; /* Ensures the button is a block element */
+      width: 90%; /* Makes the button full width */
+      background-color: #ff6600;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .card {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+            position: relative;
+        }
+        .card .tabs {
+            display: flex;
+            border-bottom: 2px solid #ff7f00;
+        }
+        .card .tabs div {
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        .card .tabs .active {
+            background-color: #ff7f00;
+            color: #fff;
+            border-radius: 10px 10px 0 0;
+        }
+        .card .header-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .card h2 {
+            font-size: 20px;
+            margin-top: 20px;
+            display: inline-block;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input {
+            width: 50%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .form-group .input-icon {
+            position: relative;
+            width: 50%;
+        }
+        .form-group .input-icon input {
+            width: 100%;
+            padding-right: 30px;
+        }
+        .form-group .input-icon i {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            padding-right: 10px;
+        }
+        .form-group .requirements {
+            font-size: 12px;
+            color: #888;
+        }
+        .form-group .requirements span {
+            color: #ff7f00;
+        }
+        .forgot-password {
+            text-align: right;
+        }
+        .forgot-password a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .btn {
+            background-color: #ff7f00;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .btn {
+            background-color: #ff7f00;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .profile-content, .security-content {
+            display: none;
+        }
+        .profile-content.active, .security-content.active {
+            display: block;
+        }
+        .edit-form {
+            display: none;
+            margin-top: 10px;
+        }
+        .edit-form input[type="text"],
+        .edit-form input[type="email"],
+        .edit-form input[type="tel"] {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .edit-form button {
+            padding: 10px 20px;
+            background-color: #ff6600;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .edit-form button:hover {
+            background-color: #e65c00;
+        }
+        .change-image-btn {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #ff6600;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+        }
+        .change-image-btn:hover {
+            background-color: #e65c00;
+        }
+        .address {
+    position: relative;
+}
+
+.address .change-image-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+

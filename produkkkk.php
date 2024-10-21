@@ -1,7 +1,7 @@
 <?php
 require_once("config/connect.php");
 $idjasa = $_GET['idjasa'];
-$query1 = "SELECT service.*, user.nama_lengkap as seller, kategori.kategori as jenis from service join user on service.id_seller=user.id join kategori on service.kategori_id=kategori.id where user.id=62;";
+$query1 = "SELECT service.*, user.nama_lengkap as seller, kategori.kategori as jenis from service join user on service.id_seller=user.id join kategori on service.kategori_id=kategori.id where user.id=0;";
 $runsql = mysqli_query($is_connect, $query1);
 ?>
 
@@ -83,7 +83,7 @@ $runsql = mysqli_query($is_connect, $query1);
             Sold <span>36</span> · 
             <span class="text-warning"><i class="fas fa-star"></i> 3.0</span> (30) · 
             Review (30)
-        </div>
+      </div>
      <div class="tags">
       <span>
       <?php echo $data["jenis"] ?>

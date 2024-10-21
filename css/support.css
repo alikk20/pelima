@@ -1,0 +1,294 @@
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .container {
+            display: flex;
+        }
+        .sidebar {
+            width: 200px;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            height: 100vh;
+        }
+        .sidebar img {
+            width: 100px;
+            margin-bottom: 20px;
+        }
+        .sidebar a {
+            display: block;
+            color: #333;
+            text-decoration: none;
+            margin: 10px 0;
+            font-size: 18px;
+        }
+        .sidebar a.active {
+            color: white;
+            background-color: #ff7f00;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .content {
+            flex: 1;
+            padding: 20px;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header h1 {
+            font-size: 24px;
+            margin: 0;
+        }
+        .header .breadcrumb {
+            font-size: 14px;
+            color: #888;
+        }
+        .profile-card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 20px;
+            margin-top: 20px;
+        }
+        .profile-card .tabs {
+            display: flex;
+            border-bottom: 2px solid #ff6600;
+        }
+        .profile-card .tabs div {
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        .profile-card .tabs .active {
+            background-color: #ff6600;
+            color: #fff;
+            border-radius: 10px 10px 0 0;
+        }
+        .profile-card .content {
+            padding: 20px;
+        }
+        .profile-card .content img {
+            width: 150px;
+            height: 150px;
+            border-radius: 10px;
+            margin-right: 20px;
+        }
+        .profile-card .content .info {
+            display: flex;
+            align-items: center;
+        }
+        .profile-card .content .info .details {
+            flex: 1;
+        }
+        .profile-card .content .info .details h2 {
+            margin: 0;
+            font-size: 20px;
+        }
+        .profile-card .content .info .details p {
+            margin: 5px 0;
+            color: #888;
+        }
+        .profile-card .content .info .details .edit {
+            color: #ff6600;
+            cursor: pointer;
+        }
+        .profile-card .content .address {
+            margin-top: 20px;
+        }
+        .profile-card .content .address p {
+            margin: 5px 0;
+        }
+        .profile-card .content .address .edit {
+            color: #ff6600;
+            cursor: pointer;
+        }
+        .profile-card .content .address .bold-text {
+            font-weight: bold;
+        }
+        .ad {
+            background-color: #f5f5f5;
+            padding: 10px;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .ad a {
+            color: #ff7f00;
+            text-decoration: none;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+    .card {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+            position: relative;
+        }
+        .card .tabs {
+            display: flex;
+            border-bottom: 2px solid #ff7f00;
+        }
+        .card .tabs div {
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        .card .tabs .active {
+            background-color: #ff7f00;
+            color: #fff;
+            border-radius: 10px 10px 0 0;
+        }
+        .card .header-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .card h2 {
+            font-size: 20px;
+            margin-top: 20px;
+            display: inline-block;
+        }
+        .support-content {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+        .support-content h2 {
+            font-size: 20px;
+            margin: 0 0 20px 0;
+        }
+        .support-content .search-container {
+            position: relative;
+            margin-bottom: 20px;
+        }
+        .support-content .search-container input {
+            width: 100%;
+            padding: 10px 10px 10px 40px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .support-content .search-container i {
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #999;
+        }
+        .support-content .faq {
+            border-top: 1px solid #ddd;
+            padding: 10px 0;
+        }
+        .support-content .faq:first-child {
+            border-top: none;
+        }
+        .support-content .faq h3 {
+            font-size: 16px;
+            margin: 0;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .support-content .faq p {
+            display: none;
+            margin: 10px 0 0 0;
+            font-size: 14px;
+            color: #666;
+        }
+        .support-content .faq.active p {
+            display: block;
+        }
+        .support-content .faq.active h3 i {
+            transform: rotate(180deg);
+        }
+        @media (min-width: 768px) {
+            .container {
+                flex-direction: row;
+            }
+            .sidebar {
+                width: 200px;
+                border-right: 1px solid #ddd;
+                border-bottom: none;
+            }
+            .header .ad {
+                margin-top: 0;
+            }
+        }
+        @media (max-width: 767px) {
+            .support-content .search-container input {
+                width: 80%;
+                padding: 10px 10px 10px 40px;
+            }
+        }
+        .contact-methods {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+        }
+        .contact-method {
+            background-color: #f5f5f5;
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+            width: 30%;
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+        }
+        .contact-method i {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .contact-method p {
+            margin: 0;
+            font-size: 18px;
+        }
+        .form-container {
+            background-color: #ffe6cc;
+            padding: 20px;
+            border-radius: 5px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .form-container .left, .form-container .right {
+            width: 50%;
+        }
+        .form-container .left input, .form-container .right textarea {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin: 5px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .form-container .left .name-container {
+            display: flex;
+            justify-content: space-between;
+        }
+        .form-container .left .name-container input {
+            width: calc(50% - 10px);
+        }
+        .form-container textarea {
+            height: 100px;
+        }
+        .form-container button {
+            background-color: #ff7f00;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+        }

@@ -1,3 +1,18 @@
+<?php
+session_start();
+require_once("config/connect.php");
+
+if(isset($_GET['search'])){
+   $search = $_GET['search'];
+   $query1 = "SELECT service.*, user.nama_lengkap AS penjual, review_counts.jumlah_review, avg_rating.rata_rating FROM service INNER JOIN user ON service.id_seller = user.id LEFT JOIN (SELECT id_service, COUNT(id) AS jumlah_review FROM review GROUP BY id_service) AS review_counts ON service.id = review_counts.id_service LEFT JOIN (SELECT id_service, AVG(rating) AS rata_rating FROM review GROUP BY id_service) AS avg_rating ON service.id = avg_rating.id_service where service.judul LIKE '%". $search ."%' AND service.kategori_id=2";
+}else{
+   $query1 = "SELECT service.*, user.nama_lengkap AS penjual, review_counts.jumlah_review, avg_rating.rata_rating FROM service INNER JOIN user ON service.id_seller = user.id LEFT JOIN (SELECT id_service, COUNT(id) AS jumlah_review FROM review GROUP BY id_service) AS review_counts ON service.id = review_counts.id_service LEFT JOIN (SELECT id_service, AVG(rating) AS rata_rating FROM review GROUP BY id_service) AS avg_rating ON service.id = avg_rating.id_service where service.kategori_id=2";
+}
+
+$result = mysqli_query($is_connect, $query1);
+$all = mysqli_fetch_all($result, MYSQLI_BOTH);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -33,100 +48,10 @@
 
   <body>
     <header>
-      <navbar>
-        <div class="topnav container-fluid d-flex flex-column ps-5 py-3">
-          <div class="flex-row usernav d-inline-flex justify-content-end">
-            <div class="cart p-2">
-              <button
-                type="button"
-                class="btn btn-grey btn-labeled d-flex justify-content-between"
-              >
-                50+<i class="material-symbols-outlined">shopping_cart</i>
-              </button>
-            </div>
-            <div class="account p-2">
-              <button
-                type="button"
-                class="btn btn-grey btn-labeled d-flex justify-content-between"
-              >
-                Ariadna<i class="material-symbols-outlined ms-2">person</i>
-              </button>
-            </div>
-          </div>
-          <div
-            class="d-flex flex-row ms-4 px-1 pb-1 border-bottom align-items-center"
-          >
-            <div class="searchbar me-auto">
-              <div class="currentpage">
-                <h2>Explore</h2>
-              </div>
-            </div>
-            <div class="filter pe-2">
-              <button type="button" class="btn btn-grey">Filters</button>
-            </div>
-            <div class="search">
-              <button type="button" class="btn d-flex justify-content-center">
-                <i class="material-symbols-outlined">search</i>
-              </button>
-            </div>
-          </div>
-        </div>
-      </navbar>
+      <?php include('navbar.php') ?>
     </header>
-    <div
-      class="d-flex flex-column flex-shrink-0 sidebar-wrap border-end py-4 sidenav"
-    >
-      <a href="/" class="text-decoration-none logo-wrap py-auto">
-        <div class="icon-wrap">
-          <img src="image/textlogo.svg" />
-        </div>
-        <span><img src="image/logo.svg" class="mx-2" /></span>
-      </a>
-      <hr />
-      <ul class="nav nav-pills flex-column mb-auto">
-        <li class="nav-item">
-          <a href="#" class="nav-link active" aria-current="page">
-            <div class="icon-wrap">
-              <i class="material-symbols-outlined">explore</i>
-            </div>
-            <span>Explore</span>
-          </a>
-        </li>
-        <li>
-          <a href="#" class="nav-link">
-            <div class="icon-wrap">
-              <i class="material-symbols-outlined">show_chart</i>
-            </div>
-            <span>Popular</span>
-          </a>
-        </li>
-        <li>
-          <a href="#" class="nav-link">
-            <div class="icon-wrap">
-              <i class="material-symbols-outlined">precision_manufacturing</i>
-            </div>
-            <span>Products</span>
-          </a>
-        </li>
-        <li>
-          <a href="#" class="nav-link">
-            <div class="icon-wrap">
-              <i class="material-symbols-outlined">card_travel</i>
-            </div>
-            <span>Services</span>
-          </a>
-        </li>
-      </ul>
-    </div>
+  <div class="container">
     <div class="products">
-      <div class="search-filter">
-        <input class="search-input" id="search-input" placeholder="Search..." />
-        <button class="search-button" onclick="toggleSearchInput()">
-          <i class="fas fa-search"> </i>
-        </button>
-        <button class="filter-button">Filters</button>
-      </div>
-      <hr />
       <h3>Showing Results for "Arizz"</h3>
       <div class="sort">
         <label for="sort"> Sort by </label>
@@ -323,6 +248,7 @@
         </div>
       </div>
     </div>
+  </div>
     <footer>
       <!-- place footer here -->
     </footer>

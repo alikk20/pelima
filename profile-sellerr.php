@@ -39,8 +39,11 @@
           <div class="tab-button active" id="profile-button" onclick="showTab('profile')">
             Profile
           </div>
-          <div class="tab-button" id="security-button" onclick="showTab('security')">
-            Security
+          <div class="tab-button" id="products-button" onclick="showTab('products')">
+            Products
+          </div>
+          <div class="tab-button" id="services-button" onclick="showTab('services')">
+            Services
           </div>
         </div>
         <div class="content">
@@ -155,7 +158,7 @@
               </div>
             </div>
           </div>
-          <div class="tab-content" id="security">
+          <div class="tab-content" id="products">
             <div class="header-row">
               <h2>
                 Change Password
@@ -222,7 +225,74 @@
               Change Password
             </button>
           </div>
-        </div>
+          <div class="tab-content" id="services">
+            <div class="header-row">
+              <h2>
+                tesfsdsd
+              </h2>
+              <div class="forgot-password">
+                <a href="#">
+                  Forgot Password?
+                </a>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="old-password">
+                Old Password
+              </label>
+              <div class="input-icon">
+                <input id="old-password" type="password" value="********" />
+                <i class="fas fa-eye" onclick="togglePasswordVisibility('old-password', this)">
+                </i>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="new-password">
+                New Password
+              </label>
+              <div class="input-icon">
+                <input id="new-password" type="password" value="budiono siregar" />
+                <i class="fas fa-eye" onclick="togglePasswordVisibility('new-password', this)">
+                </i>
+              </div>
+              <div class="requirements">
+                <ul>
+                  <li>
+                    Minimum characters
+                    <span>
+                      8
+                    </span>
+                  </li>
+                  <li>
+                    One uppercase character
+                  </li>
+                  <li>
+                    One lowercase character
+                  </li>
+                  <li>
+                    One special character
+                  </li>
+                  <li>
+                    One number
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="confirm-password">
+                Confirm New Password
+              </label>
+              <div class="input-icon">
+                <input id="confirm-password" placeholder="enter your confirm new password" type="password" />
+                <i class="fas fa-eye" onclick="togglePasswordVisibility('confirm-password', this)">
+                </i>
+              </div>
+            </div>
+            <button class="btn">
+              Change Password
+            </button>
+          </div>
+        </div>5yth
       </div>
     </div>
   </div>
