@@ -4,7 +4,7 @@ body {
 }
 
 :root {
-    --stevieorange: #e78531;
+    --stevieorange: #f77f00;
     --darkgrey: #D9D9D9;
     --lightgrey: #F7F7F7;
 }
@@ -19,6 +19,7 @@ header {
     z-index: 100;
     position: fixed;
     max-width: 100%;
+    paddi
 }
 
 .topnav .usernav .btn,

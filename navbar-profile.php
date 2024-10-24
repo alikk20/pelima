@@ -10,7 +10,6 @@
 
     <!-- Fonts -->
 
-
     <!-- Bootstrap CSS v5.2.1 -->
     
     <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans" rel="stylesheet">
@@ -23,7 +22,7 @@
     <header>
        
     </header>
-    <div class="d-flex flex-column flex-shrink-0 sidebar-wrap border-end my-3 sidenav">
+     <div class="d-flex flex-column flex-shrink-0 sidebar-wrap border-end my-3 sidenav">
         <a href="/" class="text-decoration-none logo-wrap py-auto">
             <div class="icon-wrap">
                 <img src="image/textlogo.svg">
@@ -58,6 +57,49 @@
             </li>
         </ul>
     </div>
+    <!-- <div class="d-flex flex-column flex-shrink-0 sidebar-wrap border-end my-3 sidenav">
+        <a href="/" class="text-decoration-none logo-wrap py-auto">
+            <div class="icon-wrap">
+                <img src="image/textlogo.svg">
+            </div>
+            <span><img src="image/logo.svg" class="mx-2"></span>
+        </a>
+        <hr>
+        <ul class="nav nav-pills flex-column mb-auto">
+            <li class="nav-item">
+                <a href="main.php" class="nav-link">
+                    <div class="icon-wrap">
+                        <i class="material-symbols-outlined">explore</i>
+                    </div>
+                    <span>Explore</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="nav-link">
+                    <div class="icon-wrap">
+                          <i class="material-symbols-outlined">show_chart</i>
+                    </div>
+                    <span>Popular</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="nav-link">
+                    <div class="icon-wrap">
+                        <i class="material-symbols-outlined">precision_manufacturing</i>
+                    </div>
+                    <span>Products</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="nav-link">
+                    <div class="icon-wrap">
+                        <i class="material-symbols-outlined">card_travel</i>
+                    </div>
+                    <span>Services</span>
+                </a>
+            </li>
+        </ul>
+    </div> -->
     <main>
     </main>
     <footer>

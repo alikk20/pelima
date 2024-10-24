@@ -5,23 +5,20 @@
     Account Profile
   </title>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="css/profile-page.css">
+  <link rel="stylesheet" href="css/profilepages.css">
 </head>
 
 <body>
   <div class="container">
   <header>
-  <?php include('navbar-profile.php') ?>
-    </header>
+    <?php include('navbar-profile.php') ?>
+  </header>
     <div class="content">
       <div class="header">
         <div>
-          <h1>
+           <h1 style="font-size: 50px; margin: 20px 30px 0 0;">
             Account
           </h1>
-          <div class="breadcrumb">
-            dashboard/account/profile
-          </div>
         </div>
         <div class="ad">
           <div>
@@ -39,7 +36,7 @@
           <div class="tab-button active" id="profile-button" onclick="showTab('profile')">
             Profile
           </div>
-          <div class="tab-button" id="security-button" onclick="showTab('security')">
+          <div class="tab-button" id="products-button" onclick="showTab('products')">
             Security
           </div>
         </div>
@@ -155,10 +152,77 @@
               </div>
             </div>
           </div>
-          <div class="tab-content" id="security">
+          <div class="tab-content" id="products">
             <div class="header-row">
               <h2>
                 Change Password
+              </h2>
+              <div class="forgot-password">
+                <a href="#">
+                  Forgot Password?
+                </a>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="old-password">
+                Old Password
+              </label>
+              <div class="input-icon">
+                <input id="old-password" type="password" value="********" />
+                <i class="fas fa-eye" onclick="togglePasswordVisibility('old-password', this)">
+                </i>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="new-password">
+                New Password
+              </label>
+              <div class="input-icon">
+                <input id="new-password" type="password" value="budiono siregar" />
+                <i class="fas fa-eye" onclick="togglePasswordVisibility('new-password', this)">
+                </i>
+              </div>
+              <div class="requirements">
+                <ul>
+                  <li>
+                    Minimum characters
+                    <span>
+                      8
+                    </span>
+                  </li>
+                  <li>
+                    One uppercase character
+                  </li>
+                  <li>
+                    One lowercase character
+                  </li>
+                  <li>
+                    One special character
+                  </li>
+                  <li>
+                    One number
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="confirm-password">
+                Confirm New Password
+              </label>
+              <div class="input-icon">
+                <input id="confirm-password" placeholder="enter your confirm new password" type="password" />
+                <i class="fas fa-eye" onclick="togglePasswordVisibility('confirm-password', this)">
+                </i>
+              </div>
+            </div>
+            <button class="btn">
+              Change Password
+            </button>
+          </div>
+          <div class="tab-content" id="services">
+            <div class="header-row">
+              <h2>
+                tesfsdsd
               </h2>
               <div class="forgot-password">
                 <a href="#">

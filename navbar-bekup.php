@@ -55,27 +55,21 @@ $uri = $_SERVER['REQUEST_URI'];
                             <h2>Explore</h2>
                         </div>
                     </div>
-
-                <div class="filsearch d-inline-flex pb-1 me-1">
-                    <?php if ($uri !== '/index.php'): ?>
-                        <form action="<?php echo basename($_SERVER['PHP_SELF']); ?>" method="GET"> <!-- Use the current page as the action -->
-                            <div class="search d-flex">
-                                <input 
-                                    type="text" 
-                                    name="search" 
-                                    placeholder="Search..." 
-                                    class="input" 
-                                    value="<?php echo isset($_GET['search']) ? htmlspecialchars($_GET['search']) : ''; ?>" 
-                                />
-                                <button type="submit" class="btn d-flex justify-content-center">
-                                    <i class="material-symbols-outlined my-auto me-1 ms-0">search</i>                                      
-                                </button>
-                            </div>
+                    <div class="filsearch d-inline-flex pb-1 me-1"><!--
+                        <div class="filter pb-1">
+                            <button type="button" class="btn">
+                                Filters
+                            </button>
+                        </div>-->
+                        <form action="products.php?search='$search'" method="GET">
+                        <div class="search d-flex">
+                            <input type="text" name="search" placeholder="Search..." class="input" />
+                            <a href="#" class="btn d-flex justify-content-center">
+                                <i class="material-symbols-outlined my-auto me-1 ms-0">search</i>
+                            </a>
+                        </div>
                         </form>
-                    <?php endif; ?>
-                </div>
-
-
+                    </div>
                 </div>
             </div>
         </navbar>

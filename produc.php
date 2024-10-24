@@ -43,27 +43,42 @@ $all = mysqli_fetch_all($result, MYSQLI_BOTH);
     <?php
         foreach($all as $service){                       
     ?>
+        <div class="products ">
+             <div class="sort">
+              <label for="sort">
+               Sort by
+              </label>
+              <select id="sort">
+               <option>
+                Newest
+               </option>
+              </select>
+             </div>
             <div class="product-list">
              <div class="product-item" onclick="window.location.href='#'">
-              <img alt="RC Car" height="200" src="https://storage.googleapis.com/a1aa/image/OipuXdfeNuvlrEDYPJCceJSwNUQpndRZPHwj0IsnTIxoP6NnA.jpg" width="200"/>
+              <img alt="<?php echo $service['judul']?>" height="200" src="/image/product/<?php echo $service['id_seller']?>/<?php echo $service['foto']?>" class="rounded" width="200" style="object-fit: cover;"/>
               <h4>
               <?php echo $service['judul'] ?>
               </h4>
               <p class="price">
-               Rp200.000
+              <?php echo $service['hargamin'] ?>
               </p>
               <div class="user-info">
-               <img alt="User" height="20" src="https://storage.googleapis.com/a1aa/image/I4IOKv3ykKakCNcqg4rknFGCek0uwogeAZFUf8jatC7mX6NnA.jpg" width="20"/>
+               <img alt="User" height="20" src="https://storage.googleapis.com/a1aa/image/I4IOKv3ykKakCNcqg4rknFGCek0uwogeAZFUf8jatC7mX6NnA.jpg" width="20" />
                <p>
-                Mas Arizz
+               <?php echo $service['penjual'] ?>
                </p>
               </div>
               <div class="rating">
-               <i class="fas fa-star">
-               </i>
-               <span>
-                2.0 | Sold
-               </span>
+              <small class="text-muted">
+                <i class="fas fa-star text-warning mr-1"></i>
+                <?php 
+                    $rata=$service["rata_rating"];
+                    $hasil = round($rata, 1);
+                    echo $hasil; 
+                ?> 
+                (<?php echo $service['jumlah_review'] ?>)
+                </small>
               </div>
              </div>
             </div>
